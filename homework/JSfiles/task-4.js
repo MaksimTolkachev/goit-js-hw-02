@@ -1,15 +1,5 @@
 const formatString = function(string) {
-  const lengthMax = 40;
-  let reverseToString;
-  let finalString;
-  const arrString = string.split("");
-  if (arrString.length <= lengthMax) {
-    finalString = string;
-    return string;
-  } else arrString.length > lengthMax;
-  reverseToString = arrString.slice(0, 40);
-  finalString = reverseToString.join("") + " ... ";
-  return finalString;
+  return string.length > 40 ? `${string.slice(0, 40)}` : string
 };
 
 console.log(formatString("Curabitur ligula sapien, tincidunt non."));

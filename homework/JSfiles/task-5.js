@@ -1,25 +1,6 @@
-// const checkForSpam = function (str) { 
-// const arrStr = str.split(' ');
-// for (let i = 0; i < arrStr.length; i += 1) { 
-//     const word = arrStr[i].toLowerCase;
-//     if (arrStr[i].toLowerCase === 'spam' || arrStr[i].toLowerCase === 'sale') {
-//     return true;
-//     }
-// }
-// return false;
-// };
-
-
-
 const checkForSpam = function (str) {
-    const arr = str.toLowerCase().split(' ');
-    for (let i = 0; i < arr.length; i++) {
-        const word = arr[i];
-    if (word == 'spam' || word == 'sale' || word == '[spam]') {
-        return true;
-    }
-}
-    return false;
+    const lowStr = str.toLowerCase();
+    return lowStr.includes('spam') || lowStr.includes('sale');
 }
     
 console.log(checkForSpam('Latest technology news'));
