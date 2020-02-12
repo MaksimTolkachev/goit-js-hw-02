@@ -14,5 +14,5 @@ if (numbers.length !== 0) {
   for (const number of numbers) {
     total += number;
   }
+  alert(`Сумма чисел равна ${total}`);
 }
-alert(`Сумма чисел равна ${total}`);
